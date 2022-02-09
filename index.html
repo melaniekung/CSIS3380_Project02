@@ -7,7 +7,10 @@
     <link rel="stylesheet" href="css/reset.css">
     <link rel="stylesheet" href="css/design.css">
   </head>
-  <body>
+
+  <!-- add onload function to body to load only 10 contacts -->
+
+  <body onload="paginate(1)">
     <div class="page">
       <div class="page-header cf">
         <h2>Contacts</h2>
@@ -555,8 +558,17 @@
            </div>
         </li>
       </ul>
-      <!-- Add pagination links in this section -->
-
+      <!-- use an unordered list for pagination pages to accommodate given CSS
+        use onClick function to load corresponding contacts onto pages -->
+      <div class="pagination">
+        <ul>
+          <li><a onClick="paginate(1)" href="#">1</a></li>
+          <li><a onClick="paginate(2)" href="#">2</a></li>
+          <li><a onClick="paginate(3)" href="#">3</a></li>
+          <li><a onClick="paginate(4)" href="#">4</a></li>
+          <li><a onClick="paginate(5)" href="#">5</a></li>
+        </ul>
+      </div>
     </div>
     <script src="js/script.js"></script>
   </body>
